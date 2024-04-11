@@ -84,6 +84,7 @@ nav a:hover {
   position: fixed;
   z-index: 10;
   transform: translate(-4%, -182.5%);
+}
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
@@ -91,8 +92,8 @@ nav a:hover {
 }
 
 /*Calendar 
-*/
-html {
+ */
+ html {
 
   font-family: "Source Sans 3", sans-serif;
 
@@ -239,5 +240,4 @@ font-weight: bold;
 
 .submission-container{
   text-align: center;
-
 }
