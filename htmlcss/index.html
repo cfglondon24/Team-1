@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UK Sepsis Trust</title>
+    <title>UKST</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-     
+
     <header>
+        <img src="img/logo.jpg" width="10em" alt="UK Sepsis Trust">
         <nav>
+
+            <a href="">About Sepsis</a>
+            <a href="">Events</a>
+            <a href="">Become a Partner</a>
+
             <img src="img/logo.jpg" width="200px" alt="UK Sepsis Trust">
             <div id="buttons">
             <ul>
@@ -19,42 +25,52 @@
                 <li><button onclick="location.href='partner.html'">Become a Partner</button></li>
             </ul>
             </div>
+
         </nav>
     </header>
 
-    <main>
-        <div class="slideshow-container">
+    <div class="carousel-container">
 
-        <div class="mySlides fade">
-        <img src="img/bg1jpg.jpg" style="width:100%">
-        <div class="text">Caption Text</div>
+        <div class="slide" style="background-image: url(img/bg1.jpg); background-size: cover;">
+            <div class="content">
+                <h1>
+                    What is Sepsis?
+                </h1>
+                <p>
+                    Sepsis is a life-threatening condition that arises when the body's response to infection causes injury to its own tissues and organs. This initial stage is known as sepsis, and without timely treatment, it can progress to severe sepsis or septic shock.
+                </p>
+                <a class="next" onclick="plusSlides(1)"></a>
+            </div>
+            
         </div>
 
-        <div class="mySlides fade">
-        <img src="img/bg1jpg.jpg" style="width:100%">
-        <div class="text">Caption Two</div>
+        <div class="slide" style="background-image: url(img/bg2.jpg); background-size: cover;">
+            <div class="content">
+                <h1>
+                    Who we are.
+                </h1>
+                <p>
+                    We, at the UK Sepsis Trust, are dedicated to fighting sepsis – a hidden medical emergency that claims too many lives. Our mission is to empower people with knowledge and support.
+                </p>
+                <a class="next" onclick="plusSlides(1)"></a>
+            </div>
         </div>
 
-        <div class="mySlides fade">
-        <img src="img/bg1jpg.jpg" style="width:100%">
-        <div class="text">Caption Three</div>
+        <div class="slide" style="background-image: url(img/bg3.jpg); background-size: cover;">
+            <div class="content">
+                <h1>
+                    Voices
+                </h1>
+                <p>
+                    "I was lucky to survive sepsis. I was in a coma for 3 weeks and in hospital for 3 months. I am now a double amputee. I am lucky to be alive and I am grateful for the care I received. I am now a sepsis survivor." <br>
+                    Read More
+                </p>
+            <a class="next" onclick="plusSlides(1)"></a>
+            </div>
         </div>
 
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
-
-        </div>
-        <br>
-
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span> 
-            <span class="dot" onclick="currentSlide(2)"></span> 
-            <span class="dot" onclick="currentSlide(3)"></span> 
-        </div>
-
-       <script src="js/carousel.js"></script>
-    </main>
-
+        <script src="js/carousel.js"></script>
+    </div>
 </body>
 
 </html>
