@@ -5,125 +5,83 @@
 
 * {
     margin: 0;
-    padding: 0;
-}
-
-nav {
-    padding-left: 10%;
-    padding-right: 10%;
-    position:sticky;
-    display: inline-block;
-    vertical-align:middle;
+    padding: 0 !important;
     width: 100%;
-}
-
-nav > ul {
-    text-align: right;
-    float: right;
-}
-
-nav li {
-    text-align: right;
-    list-style: none;
-    display: inline;
-    margin-right: 10px;
-    font-family: 'DIN Black';
+    height: 100%;
 }
 
 header {
-   height: 10vh;
-   min-width: 100%;
+  position: fixed!important;
+  height: 10em;
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.0));
+  z-index: 1;
 }
 
-#buttons {
-    float: right;
-}
-
-/* CAROUSEL */
-
-* {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
-img {vertical-align: middle;}
-
-/* Slideshow container */
-.slideshow-container {
-    margin: 0 !important;
-    width: 100vw;
-    height: 100vh;
-    left: 0;
-}
-
-.slideshow-container img {
-    z-index: -1;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
+header img {
   width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
 }
 
-/* Position the "next button" to the right */
+.carousel-container {
+    position: relative; /* Moved this style to the first definition */
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 50%;
+    height: 50%;
+    padding: 2em !important;
+}
+
+.content p {
+    font-family: 'DIN Black';
+    font-size: 1.5em;
+    color: white;
+    text-align: left;
+    transform: translate(0%, -80%);
+
+}
+
+h1 {
+    font-family: 'DIN Black';
+    font-size: 3em;
+    color: white;
+    text-align: left;
+}
+
+nav {
+    position: absolute;
+    display: inline;
+    top: 0;
+    text-align: right;
+    top: 5em;
+    right: 5em;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-family: 'DIN Black';
+    font-size: 1.5em;
+    padding: 1em;
+    margin-right: 2em;
+}
+
+nav a:hover {
+    color: #f1c40f;
+}
+
 .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
   width: 100%;
-  text-align: center;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
+  height: 100%;
+  position: fixed;
+  z-index: 10;
+  transform: translate(-4%, -182.5%);
 }
