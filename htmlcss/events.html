@@ -1,73 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UK Sepsis Trust</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>UK Sepsis Trust</title>
+     <link rel="stylesheet" href="css/style1.css">
+ </head>
 
-<body>
-     
+ <body>
+
     <header>
+        <img src="img/logo.jpg" width="10em" alt="UK Sepsis Trust">
         <nav>
-            <img src="img/logo.jpg" width="200px" alt="UK Sepsis Trust">
-            <div id="buttons">
-            <ul>
-                <li><button onclick="location.href='index.html'">About Sepsis</button></li>
-                <li><button onclick="location.href='events.html'">Events</button></li>
-                <li><button onclick="location.href='partner.html'">Become a Partner</button></li>
-            </ul>
-            </div>
+
+            <a href="index.html">About Sepsis</a>
+            <a href="events.html">Events</a>
+            <a href="partner.html">Become a Partner</a>
+
+        
         </nav>
     </header>
-    
-        <div class="calendar-container">
-            <h2><class="text-center dash-h2">Calendar</h2></h2>
-            <p class="text-center">Click on any day to view the events happening on that date.</p>
-        </div>
-      
-        </div>
-        <div id="calendarApp">
-            <div class="calendar-controls">
-            <div>
-                <select id="monthSelect" class="form-control"></select>
-            </div>
-            <div>
-                <select id="yearSelect" class="form-control"></select>
-            </div>
-            <div>
-                <button id="goToDate" class="btn btn-secondary">Go</button>
-            </div>
-    
-                <div class="calendar-navigation">
-                    <button id="prevMonth" class="btn btn-outline-success">Prev</button>
-                    <button id="nextMonth" class="btn btn-outline-success">Next</button>
-                </div>
-          
-          </div>
-          <table id="calendar">
-              <thead>
-                  <tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>
-              </thead>
-              <tbody></tbody>
-          </table>
-    
-        </div>
-        <div id="modal" class="modal ">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h3 id="modalText">Day selected</h3>
-                <div id="modalJournalEntries" ></div>
-            </div>
-          </div>
-      
-        <script src="js/calendar.js"></script>
-    
-    
-          
-    
-    
-    
-    </div>
-    {% endblock %}
+
+         <div class="calendar-container">
+             <h2><class="text-center dash-h2">Calendar</h2></h2>
+             <p class="text-center">Click on any day to view the events happening on that date.</p>
+         </div>
+
+         </div>
+         <div id="calendarApp">
+             <div class="calendar-controls">
+             <div>
+                 <select id="monthSelect" class="form-control"></select>
+             </div>
+             <div>
+                 <select id="yearSelect" class="form-control"></select>
+             </div>
+             <div>
+                 <button id="goToDate" class="btn btn-secondary">Go</button>
+             </div>
+
+                 <div class="calendar-navigation">
+                     <button id="prevMonth" class="btn btn-outline-success">Prev</button>
+                     <button id="nextMonth" class="btn btn-outline-success">Next</button>
+                 </div>
+
+           </div>
+           <table id="calendar">
+               <thead>
+                   <tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>
+               </thead>
+               <tbody></tbody>
+           </table>
+
+         </div>
+         <div id="modal" class="modal ">
+             <div class="modal-content">
+                 <span class="close">&times;</span>
+                 <h3 id="modalText">Day selected</h3>
+                 <div id="modalJournalEntries" ></div>
+             </div>
+           </div>
+
+         <script src="js/calendar.js"></script>
+
+
+
+
+
+
+     </div>

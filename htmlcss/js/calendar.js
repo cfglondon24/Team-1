@@ -70,11 +70,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 .catch(error => {
                     console.error('Error fetching journal entries:', error);
                 });
-            
+
 
             dayCell.addEventListener('click', function() {
                 const selectedDay = this.textContent; 
-                
+
                 if (selectedDay) {
                     const dateString = `${selectedDay} ${months[month]} ${year}`;
                     const modalText = document.getElementById('modalText');
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     paragraph.textContent = "\n 11 pm -Webinar to spread awareness about Sepsis.";
                     modalText.appendChild(paragraph);
 
-                    
+
                     fetch(`/get_journal_entries/?date=${year}-${month + 1}-${selectedDay}`)
                     .then(response => response.json())
                     .then(data => {
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         if (data.entries.length > 0) {
                             this.setAttribute('data-has-entries', 'true'); 
                         }
-                        
+
                         data.entries.forEach(entry => {
                             if (!entry.deleted) {
                                 entriesHtml += `
@@ -115,13 +115,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
-        
-       
+
+
         document.querySelector('.close').addEventListener('click', function() {
             document.getElementById('modal').style.display = 'none';
         });
-    
-        
+
+
         window.addEventListener('click', function(event) {
             if (event.target == document.getElementById('modal')) {
                 document.getElementById('modal').style.display = 'none';
@@ -161,6 +161,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
     generateCalendar(currentMonth, currentYear);
 });
-
-
-
