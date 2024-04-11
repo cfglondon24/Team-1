@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UK Sepsis Trust</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+     
+    <header>
+        <nav>
+            <img src="img/logo.jpg" width="200px" alt="UK Sepsis Trust">
+            <div id="buttons">
+            <ul>
+                <li><button onclick="location.href='index.html'">About Sepsis</button></li>
+                <li><button onclick="location.href='events.html'">Events</button></li>
+                <li><button onclick="location.href='partner.html'">Become a Partner</button></li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+    <style>
+        
+        form {
+          margin: 0 auto;
+          width: fit-content; 
+          padding: 20px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        }
+
+        label {
+          display: block;
+          margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"] {
+          width: 100%;
+          padding: 5px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        }
+        textarea {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          min-height: 100px;
+        }
+      </style>
+  </style>
+</head>
+<body>
+    <div class="partner-container">
+        <h2><class="text-center dash-h2">Become a partner</h2></h2>
+        <p class="text-center">Join us and make an impact.</p>
+    </div>
+  <form action="form-submission.php" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <label for="email">What company do you work for?</label>
+    <input type="text" id="name" name="name" required>
+    <label for="reason">Select an activity you would like to be part of ?</label>
+    <select id="reason" name="reason">
+      <option value="">Select a reason</option> <option value="expand_services">Webinars</option>
+      <option value="support_cause">Seminars</option>
+      <option value="support_cause">local community talks</option>
+    </select>
+    <label for="reason">Why would you like to join as a partner? (Optional)</label>
+    <textarea id="reason" name="reason"></textarea>
+    <li><button onclick="location.href='submission.html'">Submit</button></li>
+  </form>
+</body>
+</html>
+
